@@ -66,8 +66,8 @@ elif tool == "Code-Free":
 
     if st.button("🚀 Generate and Explain"):
         if desc:
-            with st.spinner("✨ Generating code and explanation..."):
-                generated_code = run_with_timeout(generate_code, desc, lang)
+            with st.spinner("✨ Generating code"):
+                generated_code = run_with_timeout(generate_code)
                 st.code(generated_code, language=lang.lower())
                 st.markdown("<hr style='margin-top:2rem;margin-bottom:1rem;'>", unsafe_allow_html=True)
                 st.markdown(f"<div style='color:white;'>{explanation}</div>", unsafe_allow_html=True)
