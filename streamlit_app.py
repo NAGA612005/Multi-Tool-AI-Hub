@@ -63,8 +63,7 @@ if tool == "Code Explainer":
 elif tool == "Code-Free":
     desc = st.text_area("🗒️ Describe what you want to code:", height=200, placeholder="Example: Create a login page in Flask")
     lang = st.selectbox("💻 Language:", ["Python", "JavaScript", "C++", "HTML", "Java"])
-    style = st.radio("📘 Explanation Style:", ["Beginner-friendly", "Step-by-step", "Fun + Emoji"])
-    explain_lang = st.selectbox("🌐 Explain in Language:", ["English", "Tamil", "Tanglish", "Hindi"])
+
     if st.button("🚀 Generate and Explain"):
         if desc:
             with st.spinner("✨ Generating code and explanation..."):
